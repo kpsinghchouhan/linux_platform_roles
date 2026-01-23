@@ -1,0 +1,7 @@
+---
+# vars for RedHat os family
+
+postgresql_package_names:
+  - postgresql-server
+  - postgresql
+  - python3-psycopg2 # Required for PostgreSQL-specific Ansible modules

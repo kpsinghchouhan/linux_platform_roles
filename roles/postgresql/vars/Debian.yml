@@ -1,0 +1,7 @@
+---
+# vars for Debian os family
+
+postgresql_package_names:
+  - postgresql
+  - postgresql-client
+  - python3-psycopg2 # Required for PostgreSQL-specific Ansible modules

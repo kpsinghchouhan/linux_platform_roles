@@ -1,0 +1,4 @@
+---
+# vars file for kpsinghchouhan.linux_platform_roles.postgresql
+
+postgresql_service_name: postgresql

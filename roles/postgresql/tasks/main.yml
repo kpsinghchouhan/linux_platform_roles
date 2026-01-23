@@ -1,0 +1,18 @@
+---
+# tasks file for kpsinghchouhan.linux_platform_roles.postgresql
+
+- name: Include OS-specific variables
+  ansible.builtin.include_vars:
+    file: "vars/{{ ansible_facts['os_family'] }}.yml"
+
+- name: Install PostgreSQL server and client
+  ansible.builtin.package:
+    name: "{{ postgresql_package_names }}"
+    state: present
+
+- name: Ensure PostgreSQL service is enabled and running
+  ansible.builtin.service:
+    name: "{{ postgresql_service_name }}"
+    enabled: true
+    state: started
+  ignore_errors: "{{ ansible_check_mode }}"
